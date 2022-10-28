@@ -20,7 +20,12 @@ document.getElementById("logout").addEventListener("click", function(){
         window.localStorage.removeItem("wmi_user");
         window.location.replace("./index.html");
     }
-})
+});
+// go to post tasks page
+document.getElementById("goto_machine").addEventListener("click", function(){
+    window.location.replace("./remote_tasks.html");
+});
+
 // POST login data
 function login(e) {
     e.preventDefault();

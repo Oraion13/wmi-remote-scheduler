@@ -545,6 +545,8 @@ boolean RemoteTasks::wmi_post_tasks(IWbemServices* pSvc, Json::Value user_token,
     pOutParam->GetObjectText(0, &Text);
     if (wcsstr(Text, L"ReturnValue = 0;") == NULL) {
         char  buffer[200];
+        //string msg = utils->callConvertWCSToMBS(&Text);
+        //printf("%S", Text);
         sprintf_s(buffer, 200, "Cannot post task");
         utils->sendStatus(400, 0, buffer);
         pSvc->Release();
