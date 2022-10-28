@@ -20,6 +20,8 @@ using namespace std;
 
 #include <json/json.h>
 
+#include "Utils.h"
+
 using namespace std;
 
 class RemoteTasks
@@ -27,5 +29,6 @@ class RemoteTasks
 public:
 	IWbemServices* wmi_login(string username, string password, string computer_name);
 	boolean isWindows(IWbemServices* pSvc, Json::Value user_token);
+	boolean wmi_post_tasks(IWbemServices* pSvc, Json::Value user_token, Json::Value task_token);
 };
 

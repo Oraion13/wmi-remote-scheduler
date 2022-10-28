@@ -15,5 +15,7 @@ public:
 	string callConvertWCSToMBS(BSTR* bstr);
 
 	Json::Value readRequestBody();
+
+	void sendStatus(int status_code, int key, char* value);
 };
 
