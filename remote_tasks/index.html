@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Task Scheduler</title>
+
+    <style>
+        .connected{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Remote Task Scheduler</h2>
+
+    <section id="already_connected">
+        <p>A Remote Machine already connected!</p>
+        <button id="goto_machine">GoTo</button>
+        <button id="logout">Disconnect</button>
+    </section>
+
+    <h3>PC Available?</h3>
+    <form id="login_form">
+        <p>Full Computer Name:</p>
+        <input type="text" id="computer_name" />
+        
+        <p>Domain and Username (Domain\Username):</p>
+        <input type="text" id="username" />
+        
+        <p>Password:</p>
+        <input type="password" id="password" />
+        <br />
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+<script src="./js/login.js"></script>
+</html>

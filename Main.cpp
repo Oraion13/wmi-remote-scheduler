@@ -52,8 +52,9 @@ void post_task(Utils* utils, Json::Value tokens) {
 }
 
 int main(int argc, char** argv) {
-	cout << "Content-type:application/json\r\n\r\n";
 	Utils* utils = new Utils;
+
+	// cout << "Content-type:application/json\r\n\r\n";
 
 	// get the requested method
 	char *meth;
@@ -61,7 +62,8 @@ int main(int argc, char** argv) {
 	_dupenv_s(&meth, &len, "REQUEST_METHOD");
 
 	if (strcmp(meth, "GET") == 0) {
-		cout << "Get all tasks - future" << endl;
+
+		// cout << "Get all tasks - future" << endl;
 	}
 	else if (strcmp(meth, "POST") == 0) {
 		// get the request body
@@ -78,7 +80,7 @@ int main(int argc, char** argv) {
 		}
 	}
 	else if (strcmp(meth, "DELETE") == 0) {
-		cout << "Delete a task" << endl;
+		// cout << "Delete a task" << endl;
 	}
 }
 

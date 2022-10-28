@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\XAMPP\cgi-bin\remote_tasks</OutDir>
+    <OutDir>..\..\XAMPP\cgi-bin\remote_tasks\api</OutDir>
     <TargetName>remote_tasks</TargetName>
     <TargetExt>.cgi</TargetExt>
   </PropertyGroup>

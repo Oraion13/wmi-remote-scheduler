@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Task Scheduler</title>
+
+    <style>
+        .its_repeated{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Task Scheduler</h2></center>
+    <button id="home">Home</button>
+    <button id="logout">Disconnect</button>
+    <form id="remote_tasks_form">
+        <label for="title">Title: </label>
+        <input type="text" id="title" />
+
+        <label for="description">Description: </label>
+        <input type="text" id="description" />
+        <br>
+
+        <label for="start_time">Start Time: </label>
+        <input type="datetime-local" id="start_time">
+        <br>
+
+        <label for="run_repeatedly">Run Repeatedly? </label>
+        <select id="run_repeatedly">
+            <option value="0" selected>No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <section id="if_repeated" class="its_repeated">
+            <label for="days_of_week">Repeat in Week: </label>
+            <select id="days_of_week">
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="4">Wednesday</option>
+                <option value="8">Thursday</option>
+                <option value="16">Friday</option>
+                <option value="32">Saturday</option>
+                <option value="64">Sunday</option>
+            </select>
+
+            <label for="days_of_month">Repeat in Month: </label>
+            <select id="days_of_month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">3</option>
+                <option value="8">4</option>
+                <option value="16">5</option>
+                <option value="32">6</option>
+                <option value="64">7</option>
+                <option value="128">8</option>
+                <option value="256">9</option>
+                <option value="512">10</option>
+                <option value="1024">11</option>
+                <option value="2048">12</option>
+                <option value="4096">13</option>
+                <option value="8192">14</option>
+                <option value="16384">15</option>
+                <option value="32768">16</option>
+                <option value="65536">17</option>
+                <option value="131072">18</option>
+                <option value="262144">19</option>
+                <option value="524288">20</option>
+                <option value="1048576">21</option>
+                <option value="2097152">22</option>
+                <option value="4194304">23</option>
+                <option value="8388608">24</option>
+                <option value="16777216">25</option>
+                <option value="33554432">26</option>
+                <option value="67108864">27</option>
+                <option value="134217728">28</option>
+                <option value="268435456">29</option>
+                <option value="536870912">30</option>
+                <option value="1073741824">31</option>
+            </select>
+        </section>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+<script src="./js/remote_tasks.js"></script>
+
+</html>

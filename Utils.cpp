@@ -49,10 +49,10 @@ Json::Value Utils::readRequestBody() {
 void Utils::sendStatus(int status_code, int key, char* value) {
     if (key == 0) {
         printf("Status: %d Bad Request\r\n\r\n", status_code);
-        printf("{error:%s}\r\n\r\n", value);
+        printf("{\"error\":\"%s\"}\r\n\r\n", value);
     }
     else {
         printf("Status: %d OK\r\n\r\n", status_code);
-        printf("{message:%s}\r\n\r\n", value);
+        printf("{\"message\":\"%s\"}\r\n\r\n", value);
     }
 }
